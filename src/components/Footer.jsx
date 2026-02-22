@@ -28,9 +28,6 @@ export default function Footer() {
           <p className="footer__copyright">
             &copy; {year} Sai Rachana Maguluri. Built with React & SCSS.
           </p>
-          <p className="footer__tagline">
-            Designed & developed with <span className="footer__heart">AI</span>
-          </p>
         </div>
       </div>
     </footer>

@@ -45,7 +45,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="/Sai_Rachana_Resume.pdf"
+            href="/SaiRachana_Resume.pdf"
             className="navbar__resume-btn"
             target="_blank"
             rel="noopener noreferrer"
