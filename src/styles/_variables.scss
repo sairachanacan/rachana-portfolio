@@ -1,0 +1,60 @@
+// ============================================
+// AI-Inspired Color Palette
+// ============================================
+
+// Core dark backgrounds
+$bg-primary: #000000;
+$bg-secondary: #0a0a0a;
+$bg-card: #111111;
+$bg-card-hover: #1a1a1a;
+
+// AI Accent Colors
+$ai-purple: #7c3aed;
+$ai-purple-light: #a78bfa;
+$ai-blue: #3b82f6;
+$ai-cyan: #06b6d4;
+$ai-pink: #ec4899;
+$ai-green: #10b981;
+
+// Gradients
+$gradient-primary: linear-gradient(135deg, $ai-purple 0%, $ai-blue 50%, $ai-cyan 100%);
+$gradient-accent: linear-gradient(135deg, $ai-pink 0%, $ai-purple 100%);
+$gradient-glow: linear-gradient(135deg, $ai-cyan 0%, $ai-blue 50%, $ai-purple 100%);
+$gradient-card: linear-gradient(145deg, rgba($ai-purple, 0.1) 0%, rgba($ai-blue, 0.05) 100%);
+$gradient-text: linear-gradient(90deg, $ai-cyan, $ai-purple-light, $ai-pink);
+
+// Text colors
+$text-primary: #f0f0f5;
+$text-secondary: #a0a0b8;
+$text-muted: #6b6b80;
+
+// Glass effect
+$glass-bg: rgba(255, 255, 255, 0.03);
+$glass-border: rgba(255, 255, 255, 0.08);
+$glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+// Spacing
+$section-padding: 100px 0;
+$container-max: 1200px;
+$container-padding: 0 24px;
+
+// Breakpoints
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
+$bp-wide: 1280px;
+
+// Typography
+$font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+// Transitions
+$transition-fast: 0.2s ease;
+$transition-base: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+// Border radius
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 20px;
+$radius-xl: 28px;

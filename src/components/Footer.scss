@@ -1,0 +1,91 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.footer {
+  padding: 40px 0;
+  background: $bg-primary;
+  border-top: 1px solid $glass-border;
+
+  &__container {
+    @include container;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+
+  &__logo {
+    font-family: $font-mono;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: $text-primary;
+
+    &-bracket {
+      @include gradient-text;
+      font-weight: 400;
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 28px;
+
+    @include mobile {
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    a {
+      font-size: 0.85rem;
+      color: $text-muted;
+      transition: color $transition-fast;
+
+      &:hover {
+        color: $text-primary;
+      }
+    }
+  }
+
+  &__divider {
+    height: 1px;
+    background: $glass-border;
+    margin-bottom: 24px;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 8px;
+      text-align: center;
+    }
+  }
+
+  &__copyright {
+    font-size: 0.82rem;
+    color: $text-muted;
+  }
+
+  &__tagline {
+    font-size: 0.82rem;
+    color: $text-muted;
+  }
+
+  &__heart {
+    @include gradient-text;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+}

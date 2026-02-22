@@ -1,0 +1,168 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.experience {
+  @include section;
+  background: $bg-secondary;
+
+  &__container {
+    @include container;
+    @include fade-in-up;
+  }
+
+  &__highlight {
+    @include gradient-text;
+  }
+
+  .section-title {
+    margin-bottom: 60px;
+  }
+
+  &__timeline {
+    position: relative;
+  }
+
+  &__item {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 0;
+
+    @include mobile {
+      gap: 20px;
+    }
+  }
+
+  &__marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    padding-top: 8px;
+  }
+
+  &__dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: $gradient-primary;
+    flex-shrink: 0;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      border: 2px solid rgba($ai-purple, 0.3);
+    }
+  }
+
+  &__line {
+    width: 2px;
+    flex: 1;
+    background: linear-gradient(to bottom, rgba($ai-purple, 0.4), rgba($ai-purple, 0.05));
+    min-height: 20px;
+  }
+
+  &__card {
+    @include glass-card;
+    padding: 32px;
+    margin-bottom: 32px;
+    flex: 1;
+    transition: all $transition-base;
+
+    &:hover {
+      border-color: rgba($ai-purple, 0.25);
+      transform: translateX(4px);
+    }
+
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      gap: 16px;
+
+      @include mobile {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__role {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: $text-primary;
+    margin-bottom: 4px;
+  }
+
+  &__company {
+    font-size: 0.95rem;
+    color: $ai-purple-light;
+    font-weight: 500;
+  }
+
+  &__separator {
+    color: $text-muted;
+    margin: 0 4px;
+  }
+
+  &__meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-shrink: 0;
+
+    @include mobile {
+      align-items: flex-start;
+    }
+  }
+
+  &__period {
+    font-family: $font-mono;
+    font-size: 0.82rem;
+    color: $ai-cyan;
+  }
+
+  &__location {
+    font-size: 0.82rem;
+    color: $text-muted;
+    margin-top: 2px;
+  }
+
+  &__highlights {
+    margin-bottom: 20px;
+
+    li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 0.92rem;
+      color: $text-secondary;
+      line-height: 1.7;
+      margin-bottom: 8px;
+
+      &::before {
+        content: '▸';
+        position: absolute;
+        left: 0;
+        color: $ai-cyan;
+      }
+    }
+  }
+
+  &__tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  &__tech-tag {
+    padding: 4px 12px;
+    border-radius: $radius-xl;
+    font-family: $font-mono;
+    font-size: 0.75rem;
+    background: rgba($ai-purple, 0.1);
+    color: $ai-purple-light;
+    border: 1px solid rgba($ai-purple, 0.15);
+  }
+}

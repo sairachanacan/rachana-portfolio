@@ -1,0 +1,149 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 20px 0;
+  transition: all $transition-base;
+
+  &--scrolled {
+    padding: 12px 0;
+    background: rgba($bg-primary, 0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid $glass-border;
+  }
+
+  &__container {
+    @include container;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    font-family: $font-mono;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: $text-primary;
+    transition: color $transition-fast;
+
+    &-bracket {
+      @include gradient-text;
+      font-weight: 400;
+    }
+
+    &:hover {
+      color: $ai-cyan;
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    @include mobile {
+      position: fixed;
+      inset: 0;
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;
+      background: rgba($bg-primary, 0.98);
+      backdrop-filter: blur(20px);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity $transition-base;
+
+      &--open {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: $text-secondary;
+    transition: color $transition-fast;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: $gradient-primary;
+      transition: width $transition-base;
+    }
+
+    &:hover {
+      color: $text-primary;
+
+      &::after {
+        width: 100%;
+      }
+    }
+
+    @include mobile {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__resume-btn {
+    @include button-base;
+    padding: 10px 24px;
+    font-size: 0.85rem;
+    border: 1px solid $ai-purple;
+    color: $ai-purple-light;
+    border-radius: $radius-xl;
+
+    &:hover {
+      background: rgba($ai-purple, 0.15);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba($ai-purple, 0.2);
+    }
+  }
+
+  &__hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    z-index: 1001;
+
+    @include mobile {
+      display: flex;
+    }
+
+    span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: $text-primary;
+      transition: all $transition-base;
+      border-radius: 2px;
+    }
+
+    &--open {
+      span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      span:nth-child(2) {
+        opacity: 0;
+      }
+      span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+      }
+    }
+  }
+}

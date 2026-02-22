@@ -1,0 +1,111 @@
+@use '../styles/variables' as *;
+@use '../styles/mixins' as *;
+
+.contact {
+  @include section;
+  background: $bg-secondary;
+
+  &__container {
+    @include container;
+    @include fade-in-up;
+    text-align: center;
+  }
+
+  &__highlight {
+    @include gradient-text;
+  }
+
+  .section-label,
+  .section-title {
+    text-align: center;
+  }
+
+  &__subtitle {
+    margin: 0 auto 60px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 700px;
+    margin: 0 auto 48px;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    @include glass-card;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: all $transition-base;
+    text-align: left;
+
+    &:hover {
+      border-color: rgba($ai-purple, 0.3);
+      transform: translateY(-3px);
+      background: rgba(255, 255, 255, 0.05);
+
+      .contact__card-arrow {
+        transform: translate(2px, -2px);
+        color: $ai-cyan;
+      }
+    }
+
+    &-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: $radius-sm;
+      background: rgba($ai-purple, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $ai-purple-light;
+      flex-shrink: 0;
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      min-width: 0;
+    }
+
+    &-name {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: $text-muted;
+      margin-bottom: 2px;
+    }
+
+    &-label {
+      font-size: 0.9rem;
+      color: $text-primary;
+      font-weight: 500;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &-arrow {
+      flex-shrink: 0;
+      color: $text-muted;
+      transition: all $transition-fast;
+    }
+  }
+
+  &__cta {
+    margin-top: 20px;
+
+    &-btn {
+      @include button-primary;
+      padding: 16px 48px;
+      font-size: 1.05rem;
+    }
+  }
+}
