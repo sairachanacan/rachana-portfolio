@@ -17,7 +17,7 @@ const projects = [
     subtitle: 'Luxury Beauty Salon',
     description:
       'A premium beauty salon website for Brow Loft, serving Langley and Burnaby, Vancouver. Features an elegant design with booking system, service catalog, and location-specific pages — all crafted with a luxury aesthetic.',
-    tech: ['React', 'SCSS', 'Responsive Design', 'SEO Optimized', 'Booking Integration'],
+    tech: ['Python', 'SCSS', 'Responsive Design', 'SEO Optimized', 'Booking Integration'],
     url: 'https://browloft.ca',
     color: 'pink',
     features: ['Online Booking', 'Multi-Location', 'Service Catalog', 'Mobile Responsive'],

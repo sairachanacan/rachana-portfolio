@@ -44,56 +44,68 @@ export default function Hero() {
         <div className="hero__grid" />
       </div>
 
-      <div className="hero__content">
-        <div className="hero__greeting">
-          <span className="hero__wave">Hi there</span>
-          <span className="hero__dot">,</span> I'm
-        </div>
-
-        <h1 className="hero__name">
-          Sai Rachana
-          <span className="hero__name-highlight"> Maguluri</span>
-        </h1>
-
-        <div className="hero__role">
-          <span className="hero__role-text">{text}</span>
-          <span className="hero__cursor">|</span>
-        </div>
-
-        <p className="hero__description">
-          Crafting pixel-perfect, accessible, and performant web experiences
-          with 6+ years of expertise. Building the future with AI-enhanced
-          development workflows.
-        </p>
-
-        <div className="hero__actions">
-          <a href="#projects" className="hero__btn hero__btn--primary">
-            View My Work
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="m6 9 6 6 6-6"/>
-            </svg>
-          </a>
-          <a href="#contact" className="hero__btn hero__btn--outline">
-            Get In Touch
-          </a>
-        </div>
-
-        <div className="hero__stats">
-          <div className="hero__stat">
-            <span className="hero__stat-number">6+</span>
-            <span className="hero__stat-label">Years Experience</span>
+      <div className="hero__inner">
+        <div className="hero__text">
+          <div className="hero__greeting">
+            <span className="hero__wave">Hi there</span>
+            <span className="hero__dot">,</span> I'm
           </div>
-          <div className="hero__stat">
-            <span className="hero__stat-number">20+</span>
-            <span className="hero__stat-label">Projects Delivered</span>
+
+          <h1 className="hero__name">
+            Sai Rachana
+            <span className="hero__name-highlight"> Maguluri</span>
+          </h1>
+
+          <div className="hero__role">
+            <span className="hero__role-text">{text}</span>
+            <span className="hero__cursor">|</span>
           </div>
-          <div className="hero__stat">
-            <span className="hero__stat-number">5+</span>
-            <span className="hero__stat-label">AI Tools Mastered</span>
+
+          <p className="hero__description">
+            Crafting pixel-perfect, accessible, and performant web experiences
+            with 6+ years of expertise. Building the future with AI-enhanced
+            development workflows.
+          </p>
+
+          <div className="hero__actions">
+            <a href="#projects" className="hero__btn hero__btn--primary">
+              View My Work
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="m6 9 6 6 6-6"/>
+              </svg>
+            </a>
+            <a href="#contact" className="hero__btn hero__btn--outline">
+              Get In Touch
+            </a>
+          </div>
+        </div>
+
+        <div className="hero__portrait">
+          <div className="hero__portrait-glow" />
+          <div className="hero__portrait-ring">
+            <img
+              src="/profile.jpg"
+              alt="Sai Rachana Maguluri"
+              className="hero__portrait-img"
+            />
           </div>
         </div>
       </div>
 
+      <div className="hero__stats">
+        <div className="hero__stat">
+          <span className="hero__stat-number">6+</span>
+          <span className="hero__stat-label">Years Experience</span>
+        </div>
+        <div className="hero__stat">
+          <span className="hero__stat-number">20+</span>
+          <span className="hero__stat-label">Projects Delivered</span>
+        </div>
+        <div className="hero__stat">
+          <span className="hero__stat-number">5+</span>
+          <span className="hero__stat-label">AI Tools Mastered</span>
+        </div>
+      </div>
     </section>
   );
 }
