@@ -84,7 +84,7 @@ export default function Hero() {
           <div className="hero__portrait-glow" />
           <div className="hero__portrait-ring">
             <img
-              src="/profile.jpg"
+              src="/IMG_8365_1-removebg-preview.png"
               alt="Sai Rachana Maguluri"
               className="hero__portrait-img"
             />

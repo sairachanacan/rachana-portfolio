@@ -207,9 +207,10 @@
     width: 320px;
     height: 320px;
     border-radius: 50%;
-    object-fit: cover;
-    object-position: center top;
-    border: 4px solid $bg-primary;
+    object-fit: contain;
+    object-position: center center;
+    background: $bg-primary;
+    border: none;
 
     @include mobile {
       width: 220px;
